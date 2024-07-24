@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
+
+  def post_params
+    params.require(:post).permit(:title, :body, :online)
+  end
   
   def index
     @posts = Post.where(online: true)
