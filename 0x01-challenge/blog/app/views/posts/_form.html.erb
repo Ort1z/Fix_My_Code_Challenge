@@ -1,4 +1,10 @@
 <%= form_for @post do |f| %>
+
+  <div>
+    <%= f.label :online %>
+    <%= f.check_box :online %>
+  </div>
+
   <% if @post.errors.any? %>
     <div id="errors">
       <h2><%= pluralize(@post.errors.count, "error") %> prevented this post from saving:</h2>
