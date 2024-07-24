@@ -2,8 +2,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
   
   def index
-  @posts = Post.where(online: true)
-end
+    @posts = Post.where(online: true)
+  end
 
   def new
     @post = Post.new
