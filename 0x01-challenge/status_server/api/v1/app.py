@@ -18,3 +18,8 @@ def not_found(error):
 if __name__ == "__main__":
     # python -m api.v1.app 
     Running on http://0.0.0.0:5000/
+    
+    curl -XGET http://0.0.0.0:5000/api/v1/status
+    {
+      "error": "Not found"
+    }
